@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+  .input-group {
+    position: relative;
+  }
+
+  .input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #f5f5f5;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .user-label {
+    position: absolute;
+    left: 15px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .input:focus,
+  input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+  }
+
+  .input:focus~label,
+  input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #212121;
+    padding: 0 .2em;
+    color: #2196f3;
+  }
+</style>
+<style>
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  button:hover .circle {
+    width: 100%;
+  }
+
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+
+  button:hover .button-text {
+    color: #fff;
+  }
+</style>
+
+
+<style>
+  .btn_replace {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #212121;
+    color: #ae00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn_replace:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+  }
+
+  .btn_replace span {
+    position: absolute;
+  }
+
+  .btn_replace span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+  }
+
+  .btn_replace:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+  }
+
+  .btn_replace span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+  }
+
+  .btn_replace:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+  }
+
+  .btn_replace span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+  }
+
+  .btn_replace:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+  }
+
+  .btn_replace:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+  }
+
+  .btn_replace:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+  }
+
+  .btn_replace:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+  }
+
+  .btn_replace:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+  }
+</style>
+
+
+
+<style>
+  body {
+    background-color: #212121;
+  }
+
+  .div_big {
+    position: fixed;
+    top: 100px;
+    left: 350px;
+    /* left: 100px; */
+    width: 600px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+
+  .error {
+    width: 400px;
+    height: 25px;
+    font-size: 15px;
+    color: #f5f5f5;
+    /* border: 0.5px solid #fff; */
+    border-radius: 8px;
+    margin-left: 266px;
+  }
+
+  .divmargin {
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+
+  .user_icon {
+    margin-top: 3px;
+    float: left;
+    color: white;
+    margin-left: 143px;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .red {
+    color: red;
+  }
+
+  .user_icons {
+    margin-top: 3px;
+    float: left;
+    color: red;
+    margin-left: 143px;
+  }
+
+  /* .btn_replace {
+    width: 180px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: pink;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+
+  } */
+  .title_home {
+    font-size: 48px;
+    letter-spacing: 24px;
+    color: wheat;
+    margin-left: 168px;
+  }
+
+  .verification {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+  }
+</style>
+
+
+<body>
+
+  <link rel="stylesheet" href="font/font_hbc5yj8z8df/iconfont.css">
+
+  <div class="div_big">
+
+    <span class="title_home">登入页面</span>
+
+    <div style="width: 100%; height: 30px;"></div>
+
+    <form>
+      <spna id="icon_user" class="iconfont icon-yonghuming user_icon white" style="font-size: 48px;"></spna>
+
+
+      <div class="input-group divmargin" style="margin-top: 0; margin-left: 250px;">
+        <input required="" type="text" name="text" autocomplete="off" class="input" id="username" onblur="checkId()">
+        <label class="user-label">Username</label>
+      </div>
+      <div id="error_username" class="error"></div>
+
+
+      <span id="icon_user2" class="iconfont icon-mima user_icon white" style="font-size: 48px; margin-top: 11px"></span>
+
+
+      <div class="input-group divmargin" style="margin-left: 250px;">
+        <input required="" type="password" name="text" autocomplete="off" class="input" id="password"
+          onblur="checkIder1()">
+        <label class="user-label">Password</label>
+      </div>
+      <div id="error_password" class="error"></div>
+
+      <span id="icon_user3" class="iconfont icon-shoujihao user_icon white"
+        style="font-size: 48px; margin-top: 11px"></span>
+
+
+
+      <div class="input-group divmargin" style="margin-left: 250px;">
+        <input required="" type="text" name="text" autocomplete="off" class="input" id="phone">
+        <label class="user-label">Phone</label>
+        <button class="verification">获取</button>
+      </div>
+      <div id="error_phone" class="error"></div>
+
+      <link rel="stylesheet" href="font/font_d9ttgqbp55q/iconfont.css">
+
+
+      <span id="icon_user4" class="iconfont icon-shoujihao user_icon white"
+        style="font-size: 48px; margin-top: 11px"></span>
+
+
+
+      <div class="input-group divmargin" style="margin-left: 250px;">
+        <input required="" type="text" name="text" autocomplete="off" class="input" id="yzm" ">
+      <label class=" user-label">Verification</label>
+      </div>
+      <div id="error_yzm" class="error"></div>
+
+
+
+      <div>
+        <button class="learn-more" id="login_btnf" onclick="login()" style="margin-left: 149px;">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Certify</span>
+        </button>
+
+        <!-- <input type="reset" class="btn_replace" value="Replace"> -->
+        <button class="btn_replace" type="reset" id="btn_replace" onclick="replace()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span> Replace
+        </button>
+
+
+      </div>
+    </form>
+
+  </div>
+
+</body>
+
+
+<script>
+  // 注册鼠标点击输入框时 icon变颜色
+  var icon_users = document.getElementById("icon_user");
+  var usernames = document.getElementById("username");
+  usernames.onclick = function () {
+    icon_users.classList.remove("white");
+    icon_users.classList.add("red");
+  }
+  // usernames.onblur = function () {
+  //   icon_users.classList.remove("red");
+  //   icon_users.classList.add("white");
+  // }
+  var passwords = document.getElementById("password");
+  var icon_users2 = document.getElementById("icon_user2");
+  passwords.onclick = function () {
+    icon_users2.classList.remove("white");
+    icon_users2.classList.add("red");
+  }
+
+  var phones = document.getElementById("phone");
+  // console.log(phones);
+  var icon_users3 = document.getElementById("icon_user3");
+  phones.addEventListener("click", function () {
+    icon_users3.classList.remove("white");
+    icon_users3.classList.add("red");
+  })
+
+  var yzmer = document.getElementById("yzm");
+  var icon_users4 = document.getElementById("icon_user4");
+  yzmer.addEventListener("click", function () {
+    icon_users4.classList.remove("white");
+    icon_users4.classList.add("red");
+  })
+</script>
+
+
+
+<script>
+
+  // 设置全局变量
+  flag1 = false;
+  flag2 = false;
+  flag3 = false;
+  flag4 = false;
+
+
+  // 检查用户名
+  function checkId() {
+    // 失去鼠标焦点时变换回原来的颜色
+    var icon_users = document.getElementById("icon_user");
+    icon_users.classList.remove("red");
+    icon_users.classList.add("white");
+    // 获取元素
+    var user = document.getElementById("username").value;
+    var error_user = document.getElementById("error_username");
+    // 初始error_user为空
+    error_user.innerText = "";
+    // 检查用户名是否为空
+    if (user == "" || user == null) {
+      // innerText用来添加文本内容
+      error_user.innerText = "*用户名不能为空!";
+      // 遇到错误就终止返回
+      return;
+    }
+    if (user.length < 4 || user.length > 20) {
+      error_user.innerText = "*请输入用户名长度4-20!"
+      return;
+    }
+    //  以英文字母开头，只能包含英文字母、数字、下划线
+    var usermatch = /^[a-zA-Z][a-zA-Z0-9_]*$/;               //正则表达式
+    if (!user.match(usermatch)) {
+      error_user.innerText = "* 以英文字母开头，只能包含英文字母、数字、下划线!";
+      return;
+    }
+    flag1 = true;
+  }
+
+
+  function checkIder1() {
+
+    var icon_users2 = document.getElementById("icon_user2");
+    icon_users2.classList.remove("red");
+    icon_users2.classList.add("white");
+
+    var passworder = document.getElementById("password").value;
+    var error_pass = document.getElementById("error_password");
+    error_pass.innerText = "";
+    if (passworder == "" || passworder == null) {
+      error_pass.innerText = "*密码不能为空!";
+      return;
+    }
+    if (passworder.length < 8 || passworder.length > 20) {
+      error_pass.innerText = "*密码长度为8-20!"
+      return;
+    }
+    flag2 = true;
+  }
+
+  
+  phones.addEventListener("blur", function () {
+    var icon_users3 = document.getElementById("icon_user3");
+    icon_users3.classList.remove("red");
+    icon_users3.classList.add("white");
+
+    let phoner = document.getElementById("phone").value;
+    let error_phone = document.getElementById("error_phone");
+    // console.log(error_phone);
+    error_phone.innerText = "";
+    if (phoner == "" || phoner == null) {
+      error_phone.innerText = "*手机号不能为空!";
+      return;
+    }
+    if (phoner.length != 11) {
+      error_phone.innerText = "*请输入正确的手机号!"
+      return;
+    }
+    flag3 = true;
+  })
+
+
+  yzmer.addEventListener("blur", function () {
+    var icon_users4 = document.getElementById("icon_user4");
+    icon_users4.classList.remove("red");
+    icon_users4.classList.add("white");
+    let yzmer = document.getElementById("yzm");
+    let error_yzms = document.getElementById("error_yzm");
+    error_yzms.innerText = "";
+    if (yzmer.value == "" || yzmer.value == null){
+      error_yzms.innerText = "*验证码不能为空!";
+      return;
+    }
+    if (yzmer.value.length != 6 && yzmer.value.length != 0){
+      error_yzms.innerText= "*验证码格式错误!";
+      return;
+    }
+    flag4 = true;
+  })
+
+
+  const verification = document.querySelector(".verification");
+  // console.log(verification);
+  let time = 60;
+  const yzm = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+  const yzms = yzm.join("");
+  verification.addEventListener("click", function () {
+    if (flag3) {
+      if (phones.value == "17318071915") {
+
+        alert("验证码为：" + yzms);
+        verification.disabled = true;
+        let timer = setInterval(function () {
+          if (time == 0) {
+            clearInterval(timer);
+            verification.disabled = false;
+            verification.innerText = "获取";
+          } else {
+            verification.innerText = "还剩下" + time + "秒";
+            time--;
+          }
+        }, 1000)
+      } else {
+        alert("*输入的手机号有误!");
+        return;
+      }
+    }
+  })
+  // verification.addEventListener("click",function(){
+  //   const yzm = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+  //   const yzms = yzm.join("");
+  //   alert(yzms);
+  // })
+
+
+
+  // 提交按钮
+  function login() {
+    // 只有满足上面的三个框都没有错误才能进行接下来的验证
+    if (flag1 && flag2 && flag3 && flag4) {
+      var user = document.getElementById("username").value;
+      var passworder = document.getElementById("password").value;
+      const yanzm = document.getElementById("yzm").value;
+      // console.log(yanzm);
+
+      if (user == "dsy520tby" && passworder == "tby520dsy" && yanzm == yzms) {
+        alert("认证成功!");
+        window.location.href = "file:///D:/HTML5+CSS3/D&T/%E9%A6%96%E9%A1%B5.html";
+        // 我们在window.location.href的下一行加上window.event.returnvalue=false，扑捉到这个时间，随后判为false，停止对操作，便可以解决问题。
+        window.event.returnValue = false;
+        // return false;
+      } else {
+        alert("账号或密码错误!");
+      }
+    } else {
+      alert("检查用户名或密码格式是否正确!");
+    }
+  }
+
+  function replace() {
+    var error_user = document.getElementById("error_username");
+    var error_pass = document.getElementById("error_password");
+    var error_pass2 = document.getElementById("error_password2");
+    error_user.innerText = "";
+    error_pass.innerText = "";
+    error_phone.innerText = "";
+  }
+
+</script>
+
+</html>

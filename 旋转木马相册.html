@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<style>
+  body {
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    background-color: #000;
+    display: flex;
+    perspective: 1500px;
+  }
+
+  div {
+    width: 200px;
+    height: 200px;
+    /* position: absolute; */
+    display: flex;
+    margin-top: 200px;
+    margin-left: 430px;
+    transform-style: preserve-3d;
+    animation: donghua 20s linear infinite;
+  }
+
+  div:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+
+  div img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    /* display: flex; */
+    -webkit-box-reflect: below 15px -webkit-linear-gradient(transparent 10%, rgba(255, 255, 255, 0.3));
+  }
+
+  @keyframes donghua {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  div img:nth-child(1) {
+    transform: translateZ(500px);
+  }
+
+  div img:nth-child(2) {
+    transform: rotateY(60deg) translateZ(500px);
+  }
+
+  div img:nth-child(3) {
+    transform: rotateY(120deg) translateZ(500px);
+  }
+
+  div img:nth-child(4) {
+    transform: rotateY(180deg) translateZ(500px);
+  }
+
+  div img:nth-child(5) {
+    transform: rotateY(240deg) translateZ(500px);
+  }
+  div img:nth-child(6){
+    transform: rotateY(300deg) translateZ(500px);
+  }
+</style>
+
+<body>
+  <div>
+    <img src="phtot/3D-1.jpg">
+    <img src="phtot/3D-2.jpg">
+    <img src="phtot/3D-3.jpg">
+    <img src="phtot/3D-4.jpg">
+    <img src="phtot/3D-5.jpg">
+    <img src="phtot/3D-6.jpg">
+  </div>
+</body>
+
+</html>

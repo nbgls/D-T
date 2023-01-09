@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D&T首页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<style type="text/css">
+
+
+		.title_box {
+			width: 100%;
+			height: 71.5px;
+		}
+
+		body {
+			/* background-image: url(phtot/background-2.jpg); */
+			background-color: darkgrey;
+			background-position: 0px 0px;
+			width: 99%;
+			height: 100%;
+			opacity: 1;
+			position: absolute;
+			z-index: -1;
+		}
+
+		@font-face {
+			font-family: jianzhi;
+			src: url(font/FZJZJW.TTF);
+		}
+
+		.titlt_font {
+			font-family: jianzhi;
+			font-size: 48px;
+			text-align: center;
+			white-space: pre;
+			text-shadow: 10px 10px 10px white;
+			float: right;
+			line-height: 100px;
+			width: 88%;
+			height: 100%;
+		}
+
+		.navigation_bar {
+			width: 74%;
+			height: 71.5px;
+			float: right;
+			top: 10px;
+			/* background-color: blanchedalmond; */
+			/* border: 2px solid black; */
+		}
+
+		.photo_big {
+			margin-top: 7px;
+			margin-left: 30px;
+		}
+
+		.navigation_ul {
+			display: inline;
+		}
+
+		.navigation_li {
+			display: inline-block;
+			/* 使li标签显示在一行 */
+			float: right;
+			white-space: nowrap;
+			/* 使文字强制显示在一行 能被br标签换行 */
+			padding: 28px 30px 15px 30px;
+			/* 内边距 ：上 右 下 左 */
+			/* border-left: 1px solid black; */
+			white-space: pre;
+
+		}
+
+		a {
+			text-decoration: none;
+			/* 取消超链接下划线 */
+		}
+
+		.switch_box {
+			width: 99%;
+			height: 1000px;
+		}
+
+		.tianjia {
+			background-color: orange;
+		}
+
+		#tab>div {
+			display: none;
+		}
+
+		@font-face {
+			font-family: xieti;
+			src: url(font/STXINGKA.TTF);
+		}
+
+		.navigation_li a {
+			color: black;
+			font-weight: 12px;
+			font-family: xieti;
+			font-size: 22px;
+		}
+
+		.photo_box {
+			float: left;
+		}
+	</style>
+
+
+</head>
+
+<body id="body_home">
+
+	<div class="title_box">
+		<div style="width: 150px; height: 100%; float: left;"></div>
+		<div class="photo_box">
+			<img src="phtot/艺术1.png" width="120px" height="67.5px">
+			<!-- <div class="titlt_font">11 and 桃子 Love Story </div> -->
+		</div>
+		<div class="navigation_bar">
+			<ul class="navigation_ul" id="ul">
+				<li class="navigation_li"><a href="#">11和桃子的日常</a></li>
+				<li class="navigation_li"><a href="#">11和桃子的合照</a></li>
+				<li class="navigation_li"><a href="#"> 桃子 的 美照 </a></li>
+				<li class="navigation_li"><a href="#"> 11 的 靓照 </a></li>
+				<li class="navigation_li"><a href="#"> 首 页 </a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="switch_box" id="tab">
+
+		<div class="photo_big">
+
+			<style>
+
+				.peach_video{
+					width: 100%;
+				}				
+				.peach_video video{
+					width: 600px;
+					height: 600px;
+				}
+
+			</style>
+
+
+			
+			<div class="peach_video">
+				<video src="phtot/sp5.mp4" controls="controls" preload="preload"></video>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="photo_big">
+
+			<style>
+				.waterfall_layout_group {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-gap: 10px;
+					/* 需要用火狐游览器 其他的不支持 */
+					grid-template-rows: masonry;
+
+
+				}
+
+				.waterfall_layout_group>img {
+					height: 252px;
+					display: block;
+					border: 3px solid gainsboro;
+					border-radius: 10px;
+				}
+
+				.waterfall_layout_group>img:nth-child(1):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(2):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(3):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(4):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(5):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(6):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(7):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(8):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(9):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(10):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(11):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(12):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(13):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+				.waterfall_layout_group>img:nth-child(14):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+			</style>
+
+
+			<div class="waterfall_layout_group">
+				<img src="phtot\合照1.jpg" width="336" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照3.jpg" width="447.970135" height="252 " title="靓仔靓妹" />
+				<img src="phtot\合照14.jpg" width="336" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照6.jpg" width="336" height="252" title="靓仔靓妹" />
+
+				<img src="phtot\合照2.jpg" width="336" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照5.jpg" width="336" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照12.jpg" width="252" height="252" title="靓仔靓妹" />
+
+
+				<img src="phtot\合照9.jpg" width="336" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照8.jpg" width="252" height="252" title="靓仔靓妹" />
+
+				<img src="phtot\合照13 0.jpg" width="201.6" height="252" title="靓仔靓妹" />
+			
+				
+				<img src="phtot\合照4.jpg" width="252" height="252" title="靓仔靓妹" />
+
+				<img src="phtot\合照10.jpg" width="189" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照7.jpg" width="189" height="252" title="靓仔靓妹" />
+				<img src="phtot\合照11.jpg" width="189" height="252" title="靓仔靓妹" />
+				
+				
+			</div>
+			<hr color="#0000FF" size="3" width="100%" />
+			<audio src="music\这就是爱情.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+
+		</div>
+
+
+
+
+
+		<div class="photo_big">
+
+			<style>
+				.waterfall_layout>input {
+					height: 252px;
+					display: block;
+					border: 3px solid gainsboro;
+					border-radius: 10px;
+				}
+
+				.waterfall_layout>input:nth-child(1):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(2):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(3):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(4):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(5):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(6):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(7):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(8):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>input:nth-child(9):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+			</style>
+
+			<div class="waterfall_layout">
+				<input type="image" src="phtot\tby3.jpg" width="189" height="252" alt="陶碧燕抱董斯毅第一次送花的照片" />
+				<input type="image" src="phtot\tby8.jpg" width="189" height="252" alt="不知道啥时候拍的外出自恋照" />
+				<input type="image" src="phtot\tby5.jpg" width="189" height="252" alt="拳拳攻击，小心一拳超人" />
+				<input type="image" src="phtot\tby4.jpg" width="252" height="252" alt="穿建院校服的可爱照" />
+
+				<input type="image" src="phtot\tby12(2).jpg" width="336" height="252" alt="在建院大一时校团委拍的花花照" />
+
+				<input type="image" src="phtot\tby9.jpg" width="189" height="252" alt="在建院夜晚戴眼镜的自恋照" />
+				<input type="image" src="phtot\tby10.jpg" width="189" height="252" alt="白天上课在建院教学楼拍的自恋照" />
+				<input type="image" src="phtot\tby11.jpg" width="189" height="252" alt="晚上洗完澡洗完头拍的囚服睡衣照" />
+				<input type="image" src="phtot\tby6.jpg" width="189" height="252" alt="卷发时的第一张照片，臭美时刻" />
+			</div>
+			<hr color="#0000FF" size="3" width="100%" />
+			<audio src="music\这就是爱情.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+
+		</div>
+
+
+
+
+
+		<div class="photo_big">
+			<style>
+				.waterfall_layout {
+					display: grid;
+					grid-template-columns: repeat(5, 1fr);
+					grid-gap: 10px;
+					/* 需要用火狐游览器 其他的不支持 */
+					grid-template-rows: masonry;
+
+				}
+
+				.waterfall_layout>img {
+					/* width: 200px; */
+					height: 252px;
+					display: block;
+					border: 3px solid gainsboro;
+					border-radius: 10px;
+				}
+
+
+				@keyframes fangda {
+					from {
+						transform: scale(1, 1);
+					}
+
+					to {
+						transform: scale(1.5, 1.5);
+						border: 3px solid rgba(0, 77, 255, 0);
+					}
+				}
+
+				.waterfall_layout>img:nth-child(1):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					/* 使动画定格再最后一帧 */
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(2):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(3):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(4):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(5):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(6):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(7):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(8):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+
+				.waterfall_layout>img:nth-child(9):hover {
+					animation-name: fangda;
+					animation-duration: 0.5s;
+					animation-timing-function: linear;
+					animation-delay: 0s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+			</style>
+
+			<div class="waterfall_layout">
+				<img src="phtot\dsy8 0.jpg">
+				<!-- <div class="photo_assistant">
+					<img src="phtot/dsy9.jpg">
+				</div> -->
+
+				<img src="phtot\dsy5 0.jpg">
+
+				<img src="phtot\dsy1 0.jpg">
+
+				<img src="phtot\dsy4 0.jpg">
+
+				<img src="phtot\dsy9.jpg">
+
+				<img src="phtot\dsy6 0.jpg">
+
+				<img src="phtot\dsy11.jpg">
+
+				<img src="phtot\dsy10.jpg">
+
+				<img src="phtot\dsy7.jpg">
+				<br>
+				<audio src="music\这就是爱情.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+			</div>
+		</div>
+
+
+
+		<div class="photo_big" style="display: block;">
+
+			<style>
+				.carousel {
+					left: 58px;
+					width: 1080px;
+					height: 288px;
+
+					border-radius: 16px;
+
+					overflow: hidden;
+
+					position: relative;
+				}
+
+				.carousel .container {
+					width: 100%;
+					height: 100%;
+
+					position: relative;
+					left: 0;
+
+					display: flex;
+
+					/* 过渡动画 1s */
+					transition: all 1s;
+				}
+
+				.carousel .container a {
+					width: 100%;
+					height: 100%;
+
+					flex-shrink: 0;
+				}
+
+				.carousel .container a img {
+					width: 100%;
+					height: 100%;
+
+					object-fit: cover;
+				}
+
+				.carousel .shift .btn {
+					/* 绝对定位且垂直居中 */
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto 0;
+
+					/* background-color: teal; */
+					color: white;
+
+					width: 50px;
+					height: 50px;
+					border-radius: 8px;
+
+					/* font-size: 40px; */
+					font-weight: bold;
+
+					/* 字符水平垂直居中 */
+					line-height: 50px;
+					text-align: center;
+
+					cursor: pointer;
+
+					user-select: none;
+
+					/* 不透明度 0.5 */
+					opacity: 0.5;
+				}
+
+				.carousel .shift .left {
+					left: 20px;
+				}
+
+				.carousel .shift .right {
+					right: 20px;
+				}
+
+				.carousel .bottom {
+					position: absolute;
+
+					bottom: 20px;
+
+					/* 绝对定位水平居中 */
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+
+					/* 宽度等同于内容宽度 */
+					width: max-content;
+
+					display: flex;
+					/* 指示器间距 */
+					gap: 10px;
+				}
+
+				.carousel .bottom .indicator {
+					height: 5px;
+					width: 40px;
+
+					background-color: teal;
+
+					opacity: 0.5;
+					cursor: pointer;
+				}
+
+				/* .carousel:hover .bottom .indicator {
+        			opacity: 1;
+			    }	
+    			.carousel:hover .shift .btn {
+        			opacity: 1;
+    			} */
+				.home {
+					color: teal;
+				}
+
+				.home:hover {
+					color: red;
+					font-size: 40px;
+				}
+
+				.about {
+					width: 100%;
+					height: 300px;
+				}
+
+				.about_photo {
+					width: 300px;
+					height: 300px;
+					float: left;
+					border-radius: 15px;
+					box-shadow: 0 5px 5px black;
+				}
+
+				.about_title {
+					position: relative;
+					background-color: gray;
+					left: 460px;
+					top: 70px;
+					width: 100px;
+					height: 50px;
+					text-align: center;
+
+				}
+
+				.about_zhanwei {
+					width: 600px;
+					height: 40px;
+				}
+
+				.about_content {
+					float: left;
+					width: 600px;
+					height: 260px;
+					background-color: gainsboro;
+					border-radius: 15px;
+					box-shadow: 0 5px 5px black;
+				}
+
+				.about_font {
+					font-size: 18px;
+					text-indent: 2em;
+					line-height: 30px;
+					letter-spacing: 3px;
+				}
+			</style>
+			<style>
+				.spinner {
+					width: 44px;
+					height: 44px;
+					animation: spinner-y0fdc1 2s infinite ease;
+					transform-style: preserve-3d;
+				}
+
+				.spinner>div {
+					background-color: rgba(0, 77, 255, 0.2);
+					height: 100%;
+					position: absolute;
+					width: 100%;
+					border: 2px solid #004dff;
+				}
+
+				.spinner div:nth-of-type(1) {
+					transform: translateZ(-22px) rotateY(180deg);
+				}
+
+				.spinner div:nth-of-type(2) {
+					transform: rotateY(-270deg) translateX(50%);
+					transform-origin: top right;
+				}
+
+				.spinner div:nth-of-type(3) {
+					transform: rotateY(270deg) translateX(-50%);
+					transform-origin: center left;
+				}
+
+				.spinner div:nth-of-type(4) {
+					transform: rotateX(90deg) translateY(-50%);
+					transform-origin: top center;
+				}
+
+				.spinner div:nth-of-type(5) {
+					transform: rotateX(-90deg) translateY(50%);
+					transform-origin: bottom center;
+				}
+
+				.spinner div:nth-of-type(6) {
+					transform: translateZ(22px);
+				}
+
+				@keyframes spinner-y0fdc1 {
+					0% {
+						transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+					}
+
+					50% {
+						transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+					}
+
+					100% {
+						transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+					}
+				}
+			</style>
+
+
+
+			<style>
+				.loader {
+					width: 48px;
+					height: 48px;
+					margin: auto;
+					position: relative;
+				}
+
+				.loader:before {
+					content: '';
+					width: 48px;
+					height: 5px;
+					background: #f0808050;
+					position: absolute;
+					top: 60px;
+					left: 0;
+					border-radius: 50%;
+					animation: shadow324 0.5s linear infinite;
+				}
+
+				.loader:after {
+					content: '';
+					width: 100%;
+					height: 100%;
+					background: #f08080;
+					position: absolute;
+					top: 0;
+					left: 0;
+					border-radius: 4px;
+					animation: jump7456 0.5s linear infinite;
+				}
+
+				@keyframes jump7456 {
+					15% {
+						border-bottom-right-radius: 3px;
+					}
+
+					25% {
+						transform: translateY(9px) rotate(22.5deg);
+					}
+
+					50% {
+						transform: translateY(18px) scale(1, .9) rotate(45deg);
+						border-bottom-right-radius: 40px;
+					}
+
+					75% {
+						transform: translateY(9px) rotate(67.5deg);
+					}
+
+					100% {
+						transform: translateY(0) rotate(90deg);
+					}
+				}
+
+				@keyframes shadow324 {
+
+					0%,
+					100% {
+						transform: scale(1, 1);
+					}
+
+					50% {
+						transform: scale(1.2, 1);
+					}
+				}
+			</style>
+			<div class="carousel">
+				<div class="container">
+
+					<img src="phtot/切换4.jpg">
+
+
+					<img src="phtot/切换5.jpg">
+
+
+					<img src="phtot/切换2.jpg">
+
+
+					<img src="phtot/切换3.jpg">
+
+
+					<img src="phtot/切换1.jpg">
+
+				</div>
+				<link rel="stylesheet" href="./font/font_wbelzhj42vc/iconfont.css">
+				<div class="shift">
+					<div class="btn left" onclick="leftShift()"><span class="iconfont icon-fanhui home"></span></div>
+					<div class="btn right" onclick="rightShift()"><span class="iconfont icon-jinru home"></span></div>
+				</div>
+				<div class="bottom"></div>
+			</div>
+
+
+			<link rel="stylesheet" href="./font/font_8imm24s7q2x/iconfont.css">
+
+			<div class="about">
+				<div class="about_title">
+					<div style="position: relative; top: 13px"><span>关于我们</span></div>
+				</div>
+				<div style="width: 160px; height:100%; float: left; "></div>
+				<img class="about_photo" src="phtot/home-we.jpg">
+				<div class="about_zhanwei"></div>
+				<div class="about_content">
+					
+					<div style="position: relative; left: 165px; top: 30px;">
+						<a href="file:///D:/HTML5%2BCSS3/D%26T/%E6%97%8B%E8%BD%AC%E6%9C%A8%E9%A9%AC%E7%9B%B8%E5%86%8C.html" target="_blank">
+							<div class="spinner">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</a>
+					</div>
+					<div style="position: relative; left: 220px; top: -15px ;">
+						<a href="file:///D:/HTML5%2BCSS3/D%26T/%E7%88%B1%E5%BF%83.html" target="_blank">
+							<div class="loader"></div>
+						</a>
+					</div>
+					<p class="about_font">
+						这是一个奇妙的故事,我们的相遇,在机缘巧合中悄然发生,一个不怎么晴朗的天,碎花的裙子,黑色的背包,湖水和青山,摇曳的树影,夏夜的风,捧花的男孩,温润的眼眸,开始在夏天的故事,会将温暖接续再往后日子中......
+
+					</p>
+				</div>
+			</div>
+
+			<script>
+
+				// 显示的图片下标
+				let index = 0
+
+				// 图片的数量
+				let imageCount = document.querySelectorAll(
+					".carousel .container img"
+				).length
+
+				const bottom = document.querySelector(".carousel .bottom")
+				for (let i = 0; i < imageCount; i++) {
+					// DOM 操作
+
+					// 创建底部按钮
+					const indicator = document.createElement("div")
+					indicator.classList.add("indicator")
+					indicator.onclick = () => setIndex(i)
+
+					bottom.append(indicator)
+				}
+
+				function createAuto() {
+					return setInterval(() => {
+						index++
+						refresh()
+					}, 3000)
+				}
+
+				// 自动滚动
+				let autoTimer = createAuto()
+
+				function refresh() {
+					if (index < 0) {
+						// 下标小于 0 时
+						// 设置最右的图片
+						index = imageCount - 1
+					} else if (index >= imageCount) {
+						// 下标超过上限时
+						// 设置最左的图片
+						index = 0
+					}
+
+					// 获取轮播框元素
+					let carousel = document.querySelector(".carousel")
+
+					//获取轮播框的宽度
+					let width = getComputedStyle(carousel).width
+					width = Number(width.slice(0, -2))
+
+					carousel.querySelector(".container").style.left =
+						index * width * -1 + "px"
+				}
+
+				let refreshWrapper = (func) => {
+					// refresh 装饰器
+					return function (...args) {
+						let result = func(...args)
+						refresh()
+
+						// 重置自动滚动
+						clearInterval(autoTimer)
+						autoTimer = createAuto()
+						return result
+					}
+				}
+
+				let leftShift = refreshWrapper(() => {
+					index--
+				})
+				let rightShift = refreshWrapper(() => {
+					index++
+				})
+
+				let setIndex = refreshWrapper((idx) => {
+					index = idx
+				})
+
+				refresh()
+
+
+			</script>
+
+		</div>
+
+	</div>
+	<!-- <style>
+	.back{
+		background-color: black;
+	}
+</style> -->
+
+
+
+	<script>
+		// // 获取元素
+		// var trs = document.getElementById("ul").querySelectorAll("li");
+		// // console.log(trs);
+		// for (var i = 0; i < trs.length; i++){
+		// 	// 鼠标指针经过事件 onmouseover
+		// 	trs[i].onmouseover = function(){
+		// 		this.setAttribute('class',"bg");
+		// 	};
+		// 	// 鼠标离开事件
+		// 	trs[i].onmouseover = function(){
+		// 		this.className = "navigation_li";
+		// 	};
+		// }
+
+
+
+
+		// 获取所有li 
+		var lisDom = document.getElementById("ul").children;
+		// 获取 所有div
+		var tabDom = document.getElementById("tab").children;
+		// console.log(lisDom)
+		for (let i = 0; i < lisDom.length; i++) {
+			// 循环 添加点击事件
+			lisDom[i].onclick = function () {
+				// alert(i) // 弹出当前点击li 的下标。
+				//  去除 所有li class 样式-选中背景，设置所有div 隐藏
+				for (var j = 0; j < lisDom.length; j++) {
+					// lisDom[j].classList.remove("back");
+					// lisDom[j].removeAttribute("class");
+					tabDom[j].style.display = "none";
+				}
+				// 当前点击的 li 添加 class 样式-选中背景 
+				lisDom[i].setAttribute("class", "navigation_li");
+				// lisDom[i].classList.add("back");
+				// 当前点击 li 对应的 div 显示
+				tabDom[i].style.display = "block";
+			}
+		}
+	</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
